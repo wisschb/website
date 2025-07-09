@@ -1,0 +1,70 @@
+/* Taille icônes + effet au survol */
+.icon {
+  width: 60px;
+  transition: transform 0.5s ease;
+}
+.icon:hover {
+  transform: scale(1.2) rotate(8deg);
+}
+
+/* ANIMATIONS permanentes */
+.bounce {
+  animation: bounce 2s infinite ease-in-out;
+}
+.bounce-alt {
+  animation: bounceAlt 2.2s infinite ease-in-out;
+}
+.floatX {
+  animation: floatX 3s infinite ease-in-out;
+}
+.rotate {
+  animation: rotateY 4s infinite linear;
+}
+.rotate-reverse {
+  animation: rotateYReverse 4s infinite linear;
+}
+
+/* Définition des animations */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes bounceAlt {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+@keyframes floatX {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes rotateY {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateYReverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
