@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>wisschb - Welcome</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    /* Reset & base */
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #d6e4ff, #7ab8ff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 900px;
+      background: #f2f7ff;
+      border-radius: 20px;
+      margin-top: 60px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      text-align: center;
+      animation: fadeInScale 1.2s ease forwards;
+    }
+
+    /* Texte animé : entrée + mouvement gauche-droite */
+    h1 {
+      font-size: 38px;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: slideIn 1.5s forwards, floatX 4s ease-in-out infinite;
+    }
+
+    p {
+      font-size: 20px;
+      color: #34495e;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    a.github-button {
+      background-color: #1e59ff;
+      color: white;
+      font-weight: 600;
+      font-size: 18px;
+      padding: 16px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      margin-bottom: 40px;
+    }
+
+    a.github-button:hover {
+      background-color: #1849cc;
+    }
+
+    /* Icônes container */
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+
+    /* Icônes style */
+    .icon {
+      width: 60px;
+      cursor: default;
+      /* animation setup */
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+
+    /* Animations distinctes pour chaque icône */
+    .icon.java {
+      animation-name: bounce;
+      animation-duration: 2.2s;
+    }
+    .icon.python {
+      animation-name: floatX;
+      animation-duration: 3.5s;
+    }
+    .icon.html {
+      animation-name: rotate;
+      animation-duration: 6s;
+      animation-timing-function: linear;
+    }
+    .icon.css {
+      animation-name: rotateReverse;
+      animation-duration: 6s;
+      animation-timing-function: linear;
+    }
+    .icon.linux {
+      animation-name: bounceAlt;
+      animation-duration: 2.5s;
+    }
+
+    /* Animations keyframes */
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    @keyframes bounceAlt {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+    @keyframes floatX {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(14px); }
+    }
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes rotateReverse {
+      0% { transform: rotate(360deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    /* Animation titre entrée */
+    @keyframes slideIn {
+      0% { opacity: 0; transform: translateX(-100%); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    /* Animation container fade scale */
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* Animation flottement titre */
+    @keyframes floatX {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(10px); }
+    }
+
+    /* Barre séparatrice en bas */
+    .bottom-bar {
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(180deg, #a4c6ff, #739efb);
+      border-top-left-radius: 35px;
+      border-top-right-radius: 35px;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>wisschb - Welcome to my page ! 👋</h1>
+    <p>
+       
+      Lycéen en Seconde TNE, je développe des projets informatiques pour renforcer mes compétences et construire mon avenir dans le numérique.<br><br>
+      Voici tous mes projets personnels présentés ci-dessous.
+    </p>
+    <a href="https://github.com" target="_blank" class="github-button">
+      🚀 Explorer mes projets GitHub
+    </a>
+    <div class="icons">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="icon java" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="icon python" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="icon html" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="icon css" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" class="icon linux" />
+    </div>
+  </div>
+
+  <div class="bottom-bar"></div>
+
+</body>
+</html>
